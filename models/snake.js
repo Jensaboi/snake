@@ -10,12 +10,13 @@ export class Snake {
     lastDirection = this.direction;
     directionQues = [];
 
+    score = 0;
+
     constructor(startingRow, startingCol, boxsize) {
         this.x = startingRow * boxsize;
         this.y = startingCol * boxsize;
         this.boxsize = boxsize;
 
-        this.score = 0;
         //starting snake size
         this.body = [
             { x: this.x, y: this.y },
