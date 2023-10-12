@@ -1,0 +1,51 @@
+    [ -----------------------------------------]
+    [                                          ]
+    [       X3                                 ]
+    [                                          ]
+    [                                          ]
+    [                                          ]
+    [                                          ]
+    [          [snake]       X1                ]
+    [                                          ]
+    [                                          ]
+    [                                          ]
+    [                                 X2       ]
+    [                                          ]
+    [                                          ]
+    [                                          ]
+    [                                          ]
+    [                                          ]
+    [                                          ]
+    [                                          ]
+    [------------------------------------------]
+
+1.[x] Make a gameboard where everything gets drawn.
+    -Show press key buttons text before start of game.      
+
+2. [x] Make apple randomly spawn on board.
+    - if snake eats apple
+        -delete apple.
+        -spawn new apple.
+        - only spawn where snake isnt?
+
+3. [x] Make Snake.
+    -check for collision (wall/self)
+    -change direction
+        -LEFT
+        -UP
+        -RIGHT
+        -DOWN                            //fixed (setIntervall felt laggy, requestAnimation smooth, but doesnt do what i want atm.)
+        -only be able to move when BLOCKSIZE % === 0 ? (trying to figure out how i can make all moves in a grid like system)
+    - add eatApple function
+        -add one block to snake body.
+        -(thinking i can save the (x,y) where snake ate apple, and drawBody)
+        -add one to first place in list, remove last item.
+
+
+4. [] Score = apples eaten?.
+    -apple eaten = score++
+
+5. Gameover function.
+    -render gameover text
+    -show score.
+    -create buttons.
