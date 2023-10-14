@@ -1,6 +1,6 @@
 export class Board {
-    constructor(rows, cols, boxsize) {
-        this.width = boxsize * cols;
-        this.height = boxsize * rows;
+    constructor(cols, rows, boxsize) {
+        this.width = cols * boxsize;
+        this.height = rows * boxsize;
     }
 }

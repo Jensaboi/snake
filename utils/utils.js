@@ -1,11 +1,7 @@
-import { ROWS, COLS, snake } from "../game.js";
+import { snake } from "../game.js";
 
-export function randomTimesRows() {
-    return Math.floor(Math.random() * ROWS);
-}
-
-export function randomTimesCols() {
-    return Math.floor(Math.random() * COLS);
+export function randomTimes(rowsOrCols) {
+    return Math.floor(Math.random() * rowsOrCols);
 }
 
 export function updateScore() {

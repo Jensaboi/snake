@@ -26,10 +26,12 @@ export function drawSnake() {
         }
     });
 }
-
+let applePng = document.getElementById("apple")
 export function drawApple() {
-    ctx.fillStyle = apple.color;
-    ctx.fillRect(apple.x, apple.y, BOXSIZE, BOXSIZE);
+    // ctx.fillStyle = apple.color;
+    // ctx.fillRect(apple.x, apple.y, BOXSIZE, BOXSIZE);
+    ctx.drawImage(applePng,apple.x, apple.y, BOXSIZE, BOXSIZE)
+
 }
 
 export function clearBoard() {

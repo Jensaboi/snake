@@ -11,23 +11,22 @@ import {
 import { initBtns } from "./utils/buttons.js";
 import {
     updateScore,
-    randomTimesCols,
-    randomTimesRows,
+    randomTimes,
     displayModalBtn,
 } from "./utils/utils.js";
 
 //(ROWS/COLS)20 * 25(BOXSIZE) = 500px grid
-export const BOXSIZE = 25;
-export const ROWS = 20;
-export const COLS = 20;
+export const BOXSIZE = 33;
+export const ROWS = 18;
+export const COLS = 22;
 export const snakeStartPosX = 5;
 
-let gameSpeed = 75;
+let gameSpeed = 92;
 let lastTimestamp = null;
 let isGameOver = false;
 
-export let board = new Board(ROWS, COLS, BOXSIZE);
-export let apple = new Apple(randomTimesCols(), randomTimesRows(), BOXSIZE);
+export let board = new Board(COLS, ROWS, BOXSIZE);
+export let apple = new Apple(randomTimes(COLS), randomTimes(ROWS), BOXSIZE);
 export let snake = new Snake(snakeStartPosX, COLS / 2, BOXSIZE);
 
 function renderGame() {
