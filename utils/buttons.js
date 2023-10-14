@@ -4,15 +4,19 @@ export function initBtns() {
     document.addEventListener("keydown", (event) => {
         switch (event.key) {
             case "ArrowUp":
+            case "w":
                 snake.changeDirection("UP");
                 break;
             case "ArrowDown":
+            case "s":
                 snake.changeDirection("DOWN");
                 break;
             case "ArrowLeft":
+            case "a":
                 snake.changeDirection("LEFT");
                 break;
             case "ArrowRight":
+            case "d":
                 snake.changeDirection("RIGHT");
                 break;
         }

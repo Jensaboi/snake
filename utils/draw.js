@@ -13,7 +13,7 @@ export function drawSnake() {
     snake.body.forEach((snakeBox, index) => {
         if (index === 0) {
             //head
-            ctx.fillStyle = snake.color;
+            ctx.fillStyle = snake.headColor;
             ctx.fillRect(snakeBox.x, snakeBox.y, BOXSIZE, BOXSIZE);
             ctx.strokeStyle = "black";
             ctx.strokeRect(snakeBox.x, snakeBox.y, BOXSIZE, BOXSIZE);

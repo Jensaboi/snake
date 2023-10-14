@@ -2,7 +2,7 @@ import { BOXSIZE } from "../game.js";
 
 export class Snake {
     //snake colors
-    color = "rgb(79, 190, 75)";
+    headColor = "rgb(79, 190, 75)";
     bodyColor = "rgb(30, 114, 27)";
 
     //snake directions
@@ -26,10 +26,24 @@ export class Snake {
     }
 
     move() {
+        
         if (this.directionQues.length) {
-            this.direction = this.directionQues.shift();
+
             this.lastDirection = this.direction;
+            this.direction = this.directionQues.shift();
+
+            //fixs to movement bugg
+            if(this.lastDirection === "UP" && this.direction === "DOWN"){
+                this.direction = this.lastDirection
+            }else if(this.lastDirection === "DOWN" && this.direction === "UP"){
+                this.direction = this.lastDirection
+            }else if(this.lastDirection === "RIGHT" && this.direction === "LEFT"){
+                this.direction = this.lastDirection
+            }else if(this.lastDirection === "LEFT" && this.direction === "RIGHT"){
+                this.direction = this.lastDirection
+            }   
         }
+
         switch (this.direction) {
             case "RIGHT":
                 this.x += BOXSIZE;

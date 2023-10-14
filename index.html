@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Snake</title>
-        <link rel="stylesheet" href="/style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap"
-            rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <h1>SNAKE</h1>
-            <div class="score-container">
-                <p class="score" id="score">0</p>
-                <div class="img-wrapper">
-                    <img src="./assets/apple.png" alt="" />
-                </div>
-            </div>
-        </header>
-        <div class="modal" id="modal">
-            <button class="restart-game" id="restart-game">RESTART GAME</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>SNAKE</h1>
+      <div class="score-container">
+        <p class="score" id="score">0</p>
+        <div class="img-wrapper">
+          <img src="./assets/apple.png" alt="" />
         </div>
-        <main>
-            <div class="game-wrapper">
-                <canvas class="canvas" id="canvas"></canvas>
-            </div>
+      </div>
+    </header>
+    <div class="modal" id="modal">
+      <button class="restart-game" id="restart-game">RESTART GAME</button>
+    </div>
+    <main>
+      <div class="game-wrapper">
+        <canvas class="canvas" id="canvas"></canvas>
+      </div>
 
-            <div class="btn-container">
-                <button id="up">
-                    <img src="./assets/arrowup.svg" alt="" />
-                </button>
-                <button id="left">
-                    <img src="./assets/arrowleft.svg" alt="" />
-                </button>
-                <button id="right">
-                    <img src="./assets/arrowright.svg" alt="" />
-                </button>
-                <button id="down">
-                    <img src="./assets/arrowdown.svg" alt="" />
-                </button>
-            </div>
-        </main>
-        <script src="game.js" type="module"></script>
-    </body>
+      <div class="btn-container">
+        <button id="up">
+          <img src="./assets/arrowup.svg" alt="" />
+        </button>
+        <button id="left">
+          <img src="./assets/arrowleft.svg" alt="" />
+        </button>
+        <button id="right">
+          <img src="./assets/arrowright.svg" alt="" />
+        </button>
+        <button id="down">
+          <img src="./assets/arrowdown.svg" alt="" />
+        </button>
+      </div>
+    </main>
+    <script src="game.js" type="module"></script>
+  </body>
 </html>

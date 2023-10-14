@@ -16,13 +16,13 @@ import {
     displayModalBtn,
 } from "./utils/utils.js";
 
-//(ROWS/COLS)20 * 18(BOXSIZE) = 360px grid
+//(ROWS/COLS)20 * 25(BOXSIZE) = 500px grid
 export const BOXSIZE = 25;
 export const ROWS = 20;
 export const COLS = 20;
 export const snakeStartPosX = 5;
 
-let gameSpeed = 65;
+let gameSpeed = 75;
 let lastTimestamp = null;
 let isGameOver = false;
 
@@ -49,10 +49,10 @@ export function updateGameLoop(timestamp) {
     //smoother then setIntervall or setTimeout
     let deltaTime = timestamp - lastTimestamp;
     if (deltaTime >= gameSpeed) {
+        lastTimestamp = timestamp;
+
         snake.move();
         snake.moveSnake();
-
-        lastTimestamp = timestamp;
     }
 
     //if apple is eaten
