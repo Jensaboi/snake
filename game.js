@@ -88,6 +88,7 @@ export function restartGame() {
     snake.directionQues = [];
     isGameOver = false;
     apple.spawnRandomApple();
+    updateScore();
     updateGameLoop();
 }
 
