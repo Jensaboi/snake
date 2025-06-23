@@ -21,7 +21,7 @@ export const ROWS = 18;
 export const COLS = 22;
 export const snakeStartPosX = 5;
 
-let gameSpeed = 92;
+let gameSpeed = 90;
 let lastTimestamp = null;
 let isGameOver = false;
 
@@ -38,7 +38,7 @@ function renderGame() {
 
 export function updateGameLoop(timestamp) {
     if (isGameOver) {
-        isGameOver = true;
+        //isGameOver = true;
         gameOver();
         return;
     }
